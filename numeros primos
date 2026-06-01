@@ -1,33 +1,37 @@
+Algoritmo NumeroPrimo
 
-		
-		Definir n, i Como Entero
-		Definir primo Como Logico
-		
-		Escribir "Ingrese un numero entero:"
-		Leer n
-		
-		Si n <= 1 Entonces
-			Escribir "El numero no es primo"
-		Sino
-			
-			primo <- Verdadero
-			i <- 2
-			
-			Mientras i < n Y primo = Verdadero Hacer
-				
-				Si n MOD i = 0 Entonces
-					primo <- Falso
-				FinSi
-				
-				i <- i + 1
-				
-			FinMientras
-			
-			Si primo = Verdadero Entonces
-				Escribir "El numero es primo"
-			Sino
-				Escribir "El numero no es primo"
-			FinSi
-			
-		FinSi
-	
+    Definir n, d, r Como Entero
+
+    Escribir "Ingrese un numero:"
+    Leer n
+
+    d = 2
+
+    Si n <= 1 Entonces
+        Escribir "El numero no es primo"
+    SiNo
+
+        Mientras d < n Hacer
+
+            r = n
+
+            Mientras r >= d Hacer
+                r = r - d
+            FinMientras
+
+            Si r = 0 Entonces
+                Escribir "El numero no es primo"
+                d = n + 1
+            SiNo
+                d = d + 1
+            FinSi
+
+        FinMientras
+
+        Si d = n Entonces
+            Escribir "El numero es primo"
+        FinSi
+
+    FinSi
+
+FinAlgoritmo
