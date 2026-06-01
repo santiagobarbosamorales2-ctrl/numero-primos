@@ -1,0 +1,33 @@
+
+		
+		Definir n, i Como Entero
+		Definir primo Como Logico
+		
+		Escribir "Ingrese un numero entero:"
+		Leer n
+		
+		Si n <= 1 Entonces
+			Escribir "El numero no es primo"
+		Sino
+			
+			primo <- Verdadero
+			i <- 2
+			
+			Mientras i < n Y primo = Verdadero Hacer
+				
+				Si n MOD i = 0 Entonces
+					primo <- Falso
+				FinSi
+				
+				i <- i + 1
+				
+			FinMientras
+			
+			Si primo = Verdadero Entonces
+				Escribir "El numero es primo"
+			Sino
+				Escribir "El numero no es primo"
+			FinSi
+			
+		FinSi
+	
